@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9018032e1cb642388535d4f4c481323f" Name="Diagram1">
+        <EntityTypeShape EntityType="REGDBModel.News" Width="1.5" PointX="8.125" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="REGDBModel.Payments" Width="1.5" PointX="1.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="REGDBModel.Ranks" Width="1.5" PointX="1.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="REGDBModel.Role" Width="1.5" PointX="6.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="REGDBModel.Teams" Width="1.5" PointX="4" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="REGDBModel.Teams_Users" Width="1.5" PointX="6.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="REGDBModel.Users" Width="1.5" PointX="4.125" PointY="3.125" IsExpanded="true" />
+        <AssociationConnector Association="REGDBModel.FK_Payments_Teams" ManuallyRouted="false" />
+        <AssociationConnector Association="REGDBModel.FK_Payments_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="REGDBModel.FK_Users_Ranks" ManuallyRouted="false" />
+        <AssociationConnector Association="REGDBModel.FK_Users_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="REGDBModel.FK_Teams_Users_Teams" ManuallyRouted="false" />
+        <AssociationConnector Association="REGDBModel.FK_Teams_Users_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
