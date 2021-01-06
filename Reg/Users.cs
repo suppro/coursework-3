@@ -27,8 +27,7 @@ namespace Reg
         public string login { get; set; }
         public string pass { get; set; }
         public string name { get; set; }
-        public System.DateTime date_reg { get; set; }
-        public decimal wallet { get; set; }
+        public Nullable<int> deleted { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Payments> Payments { get; set; }

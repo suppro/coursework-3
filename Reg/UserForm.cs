@@ -12,6 +12,8 @@ namespace Reg
     {
         Users model = new Users();
         string loginName;
+        int role;
+        string currentWeek;
         public UserForm(string loginName)
         {
             InitializeComponent();
@@ -20,11 +22,13 @@ namespace Reg
 
         private void UserForm_Load(object sender, EventArgs e)
         {
+            this.dataTable1TableAdapter.Fill(this.dataPayment.DataTable1);
+            this.dataTable1TableAdapter.Fill(this.dataPayment.DataTable1);
             this.teamsTableAdapter.Fill(this.dataTeams.Teams);
             dgvPayments.AutoGenerateColumns = false;
             loadUserInfo();
+            loadNumbersWeek();
             if (txtRole.Text == "employee") {
-                btnAdminForm.Visible = false;
                 cmbTeams.Enabled = false;
             }
                 
@@ -40,10 +44,10 @@ namespace Reg
                                join q in db.Teams on u.team_id equals q.id
                                join v in db.Users on u.user_id equals v.id
                                select u).FirstOrDefault();
+                role = model.Users.rank_id;
                 txtUserName.Text = model.Users.name;
                 txtRole.Text = model.Users.Role.role1;
                 txtRank.Text = model.Users.Ranks.rank;
-                txtWallet.Text = Convert.ToString(model.Users.wallet);
                 cmbTeams.SelectedIndex = cmbTeams.FindStringExact(model.Teams.team_name);
                 if (model == null)
                 {
@@ -51,12 +55,37 @@ namespace Reg
                     return;
                 }
             }
+
+            using (REGDBEntities db = new REGDBEntities())
+            {
+                Payments model = (from u in db.Payments
+                                  orderby u.current_week descending
+                                  select u).FirstOrDefault();
+                currentWeek = model.current_week.ToString();
+                txtCurrentWeek.Text = currentWeek;
+                if (model == null)
+                {
+                    MessageBox.Show("Ошибка выбора элемента списка", "Ошибка");
+                    return;
+                }
+            }
+        }
+
+        private void loadNumbersWeek()
+        {
+            int weeks = Convert.ToInt32(currentWeek);
+            for (int i = 1; i <= weeks; ++i)
+            {
+                cmbNumbersWeek.Items.Add(i);
+            }
         }
 
         private void refreshForms()
         {
+            
+            int selectedWeek = Convert.ToInt32(cmbNumbersWeek.SelectedIndex) + 1;
             string teamSelected = cmbTeams.GetItemText(cmbTeams.SelectedItem);
-            dataPaymentBindingSource.Filter = $"team_name = '{teamSelected}'";
+            dataPaymentBindingSource.Filter = $"team_name = '{teamSelected}' and current_week = '{selectedWeek}'";
             dataLineUpBindingSource.Filter = $"team_name = '{teamSelected}'";
             this.dataTable1TableAdapter1.Fill(this.dataLineUp.DataTable1);
             this.dataTable1TableAdapter.Fill(this.dataPayment.DataTable1);
@@ -77,28 +106,33 @@ namespace Reg
             this.Close();
         }
 
+        private void filterWeek(object sender, EventArgs e)
+        {
+            
+            string teamSelected = cmbTeams.GetItemText(cmbTeams.SelectedItem);
+            
+            
+        }
+
         private void manageButton(object sender, EventArgs e)
         {
-            AdminForm adminForm = new AdminForm();
-            adminForm.Show();
-            this.Close();
-        }
-
-        private void switchTab(object sender, EventArgs e)
-        {
-            Button btn = sender as Button;
-            if (btn.Name == btnNews.Name)
-                tabPanel.SelectedTab = metroNews;
-            else if(btn.Name == btnInfo.Name)
-                tabPanel.SelectedTab = metroInfo;
-            else if(btn.Name == btnPayments.Name)
-                tabPanel.SelectedTab = metroPayments;
-            else if(btn.Name == btnWithdrawal.Name)
-                tabPanel.SelectedTab = metroWithdrawal;
+            if(role == 1)
+            {
+                AdminForm adminForm = new AdminForm();
+                adminForm.Show();
+                this.Close();
+            }
             else
-                MessageBox.Show("Кнопка не определена");
+            {
+                MessageBox.Show("Вы не имеете достаточно прав");
+                return;
+            }
         }
 
+        private void closeApp(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
         /*
 

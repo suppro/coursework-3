@@ -25,7 +25,6 @@ namespace Reg
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<News> News { get; set; }
         public virtual DbSet<Payments> Payments { get; set; }
         public virtual DbSet<Ranks> Ranks { get; set; }
         public virtual DbSet<Role> Role { get; set; }

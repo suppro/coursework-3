@@ -36,40 +36,18 @@
             this.dataTeams = new Reg.DataTeams();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtRole = new System.Windows.Forms.Label();
             this.txtRank = new System.Windows.Forms.Label();
-            this.txtWallet = new System.Windows.Forms.Label();
-            this.btnNews = new System.Windows.Forms.Button();
-            this.btnInfo = new System.Windows.Forms.Button();
-            this.btnWithdrawal = new System.Windows.Forms.Button();
-            this.btnPayments = new System.Windows.Forms.Button();
-            this.btnAdminForm = new System.Windows.Forms.Button();
-            this.btnExit2 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabPanel = new MetroFramework.Controls.MetroTabControl();
             this.metroPayments = new MetroFramework.Controls.MetroTabPage();
+            this.txtCurrentWeek = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbNumbersWeek = new System.Windows.Forms.ComboBox();
             this.dgvPayments = new System.Windows.Forms.DataGridView();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rankDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mondayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tuesdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.wednesdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thursdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fridayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.saturdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sundayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.summcoefDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.efficiencyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataPaymentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataPayment = new Reg.DataPayment();
-            this.metroNews = new MetroFramework.Controls.MetroTabPage();
-            this.metroInfo = new MetroFramework.Controls.MetroTabPage();
-            this.metroWithdrawal = new MetroFramework.Controls.MetroTabPage();
-            this.dataTable1TableAdapter = new Reg.DataPaymentTableAdapters.DataTable1TableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.teamsTableAdapter = new Reg.DataTeamsTableAdapters.TeamsTableAdapter();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -78,9 +56,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dataTable1TableAdapter1 = new Reg.DataLineUpTableAdapters.DataTable1TableAdapter();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dataTable1TableAdapter = new Reg.DataPaymentTableAdapters.DataTable1TableAdapter();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rankDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.summcoefDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.efficiencyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.teamsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTeams)).BeginInit();
-            this.panel2.SuspendLayout();
             this.tabPanel.SuspendLayout();
             this.metroPayments.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).BeginInit();
@@ -89,6 +79,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLineUpBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLineUp)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -104,7 +96,7 @@
             // 
             this.txtUserName.AutoSize = true;
             this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtUserName.Location = new System.Drawing.Point(30, 178);
+            this.txtUserName.Location = new System.Drawing.Point(171, 29);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(124, 20);
             this.txtUserName.TabIndex = 15;
@@ -117,9 +109,9 @@
             this.cmbTeams.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTeams.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cmbTeams.FormattingEnabled = true;
-            this.cmbTeams.Location = new System.Drawing.Point(178, 83);
+            this.cmbTeams.Location = new System.Drawing.Point(12, 38);
             this.cmbTeams.Name = "cmbTeams";
-            this.cmbTeams.Size = new System.Drawing.Size(188, 28);
+            this.cmbTeams.Size = new System.Drawing.Size(196, 28);
             this.cmbTeams.TabIndex = 17;
             this.cmbTeams.ValueMember = "id";
             this.cmbTeams.SelectedIndexChanged += new System.EventHandler(this.refreshFormsAction);
@@ -137,143 +129,48 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 212);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label3.Location = new System.Drawing.Point(346, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.Size = new System.Drawing.Size(47, 20);
             this.label3.TabIndex = 19;
             this.label3.Text = "Роль";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 236);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.Location = new System.Drawing.Point(504, 29);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 13);
+            this.label4.Size = new System.Drawing.Size(65, 20);
             this.label4.TabIndex = 20;
             this.label4.Text = "Звание";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 259);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Баланс";
             // 
             // txtRole
             // 
             this.txtRole.AutoSize = true;
-            this.txtRole.Location = new System.Drawing.Point(70, 212);
+            this.txtRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtRole.Location = new System.Drawing.Point(394, 29);
             this.txtRole.Name = "txtRole";
-            this.txtRole.Size = new System.Drawing.Size(84, 13);
+            this.txtRole.Size = new System.Drawing.Size(83, 20);
             this.txtRole.TabIndex = 22;
-            this.txtRole.Text = "Название роли";
+            this.txtRole.Text = "Название";
             // 
             // txtRank
             // 
             this.txtRank.AutoSize = true;
-            this.txtRank.Location = new System.Drawing.Point(70, 236);
+            this.txtRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtRank.Location = new System.Drawing.Point(575, 29);
             this.txtRank.Name = "txtRank";
-            this.txtRank.Size = new System.Drawing.Size(96, 13);
+            this.txtRank.Size = new System.Drawing.Size(83, 20);
             this.txtRank.TabIndex = 23;
-            this.txtRank.Text = "Название звания";
-            // 
-            // txtWallet
-            // 
-            this.txtWallet.AutoSize = true;
-            this.txtWallet.Location = new System.Drawing.Point(70, 259);
-            this.txtWallet.Name = "txtWallet";
-            this.txtWallet.Size = new System.Drawing.Size(87, 13);
-            this.txtWallet.TabIndex = 24;
-            this.txtWallet.Text = "Сумма на счете";
-            // 
-            // btnNews
-            // 
-            this.btnNews.Location = new System.Drawing.Point(18, 291);
-            this.btnNews.Name = "btnNews";
-            this.btnNews.Size = new System.Drawing.Size(140, 28);
-            this.btnNews.TabIndex = 25;
-            this.btnNews.Text = "Новости";
-            this.btnNews.UseVisualStyleBackColor = true;
-            this.btnNews.Click += new System.EventHandler(this.switchTab);
-            // 
-            // btnInfo
-            // 
-            this.btnInfo.Location = new System.Drawing.Point(18, 325);
-            this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(140, 28);
-            this.btnInfo.TabIndex = 26;
-            this.btnInfo.Text = "Информация";
-            this.btnInfo.UseVisualStyleBackColor = true;
-            this.btnInfo.Click += new System.EventHandler(this.switchTab);
-            // 
-            // btnWithdrawal
-            // 
-            this.btnWithdrawal.Location = new System.Drawing.Point(18, 393);
-            this.btnWithdrawal.Name = "btnWithdrawal";
-            this.btnWithdrawal.Size = new System.Drawing.Size(140, 28);
-            this.btnWithdrawal.TabIndex = 28;
-            this.btnWithdrawal.Text = "Вывод средств";
-            this.btnWithdrawal.UseVisualStyleBackColor = true;
-            this.btnWithdrawal.Click += new System.EventHandler(this.switchTab);
-            // 
-            // btnPayments
-            // 
-            this.btnPayments.Location = new System.Drawing.Point(18, 359);
-            this.btnPayments.Name = "btnPayments";
-            this.btnPayments.Size = new System.Drawing.Size(140, 28);
-            this.btnPayments.TabIndex = 27;
-            this.btnPayments.Text = "Таблица выплат";
-            this.btnPayments.UseVisualStyleBackColor = true;
-            this.btnPayments.Click += new System.EventHandler(this.switchTab);
-            // 
-            // btnAdminForm
-            // 
-            this.btnAdminForm.Location = new System.Drawing.Point(18, 427);
-            this.btnAdminForm.Name = "btnAdminForm";
-            this.btnAdminForm.Size = new System.Drawing.Size(140, 28);
-            this.btnAdminForm.TabIndex = 29;
-            this.btnAdminForm.Text = "Управление";
-            this.btnAdminForm.UseVisualStyleBackColor = true;
-            this.btnAdminForm.Click += new System.EventHandler(this.manageButton);
-            // 
-            // btnExit2
-            // 
-            this.btnExit2.Location = new System.Drawing.Point(18, 464);
-            this.btnExit2.Name = "btnExit2";
-            this.btnExit2.Size = new System.Drawing.Size(140, 28);
-            this.btnExit2.TabIndex = 30;
-            this.btnExit2.Text = "Выход";
-            this.btnExit2.UseVisualStyleBackColor = true;
-            this.btnExit2.Click += new System.EventHandler(this.exitButton);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.MediumPurple;
-            this.panel2.Controls.Add(this.btnExit);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1147, 28);
-            this.panel2.TabIndex = 32;
-            // 
-            // btnExit
-            // 
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Location = new System.Drawing.Point(1112, 0);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(35, 28);
-            this.btnExit.TabIndex = 34;
-            this.btnExit.Text = "X";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.exitButton);
+            this.txtRank.Text = "Название";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumPurple;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 513);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1147, 28);
             this.panel1.TabIndex = 33;
@@ -281,31 +178,76 @@
             // tabPanel
             // 
             this.tabPanel.Controls.Add(this.metroPayments);
-            this.tabPanel.Controls.Add(this.metroNews);
-            this.tabPanel.Controls.Add(this.metroInfo);
-            this.tabPanel.Controls.Add(this.metroWithdrawal);
-            this.tabPanel.Location = new System.Drawing.Point(420, 56);
+            this.tabPanel.Location = new System.Drawing.Point(226, 109);
             this.tabPanel.Name = "tabPanel";
             this.tabPanel.SelectedIndex = 0;
-            this.tabPanel.Size = new System.Drawing.Size(685, 442);
+            this.tabPanel.Size = new System.Drawing.Size(909, 398);
             this.tabPanel.Style = MetroFramework.MetroColorStyle.Purple;
             this.tabPanel.TabIndex = 34;
             this.tabPanel.UseSelectable = true;
             // 
             // metroPayments
             // 
+            this.metroPayments.Controls.Add(this.txtCurrentWeek);
+            this.metroPayments.Controls.Add(this.label8);
+            this.metroPayments.Controls.Add(this.label7);
+            this.metroPayments.Controls.Add(this.cmbNumbersWeek);
             this.metroPayments.Controls.Add(this.dgvPayments);
             this.metroPayments.HorizontalScrollbarBarColor = true;
             this.metroPayments.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPayments.HorizontalScrollbarSize = 10;
             this.metroPayments.Location = new System.Drawing.Point(4, 38);
             this.metroPayments.Name = "metroPayments";
-            this.metroPayments.Size = new System.Drawing.Size(677, 400);
+            this.metroPayments.Size = new System.Drawing.Size(901, 356);
             this.metroPayments.TabIndex = 4;
             this.metroPayments.Text = "Таблица выплат";
             this.metroPayments.VerticalScrollbarBarColor = true;
             this.metroPayments.VerticalScrollbarHighlightOnWheel = false;
             this.metroPayments.VerticalScrollbarSize = 10;
+            // 
+            // txtCurrentWeek
+            // 
+            this.txtCurrentWeek.AutoSize = true;
+            this.txtCurrentWeek.BackColor = System.Drawing.Color.White;
+            this.txtCurrentWeek.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtCurrentWeek.Location = new System.Drawing.Point(477, 11);
+            this.txtCurrentWeek.Name = "txtCurrentWeek";
+            this.txtCurrentWeek.Size = new System.Drawing.Size(140, 24);
+            this.txtCurrentWeek.TabIndex = 42;
+            this.txtCurrentWeek.Text = "Номер недели";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(310, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(170, 24);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "Текущая неделя - ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(3, 11);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(140, 24);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "Номер недели";
+            // 
+            // cmbNumbersWeek
+            // 
+            this.cmbNumbersWeek.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbNumbersWeek.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cmbNumbersWeek.FormattingEnabled = true;
+            this.cmbNumbersWeek.Location = new System.Drawing.Point(149, 11);
+            this.cmbNumbersWeek.Name = "cmbNumbersWeek";
+            this.cmbNumbersWeek.Size = new System.Drawing.Size(122, 28);
+            this.cmbNumbersWeek.TabIndex = 38;
+            this.cmbNumbersWeek.SelectedIndexChanged += new System.EventHandler(this.refreshFormsAction);
             // 
             // dgvPayments
             // 
@@ -315,94 +257,17 @@
             this.dgvPayments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn,
             this.rankDataGridViewTextBoxColumn,
-            this.mondayDataGridViewTextBoxColumn,
-            this.tuesdayDataGridViewTextBoxColumn,
-            this.wednesdayDataGridViewTextBoxColumn,
-            this.thursdayDataGridViewTextBoxColumn,
-            this.fridayDataGridViewTextBoxColumn,
-            this.saturdayDataGridViewTextBoxColumn,
-            this.sundayDataGridViewTextBoxColumn,
             this.summcoefDataGridViewTextBoxColumn,
             this.efficiencyDataGridViewTextBoxColumn,
-            this.salaryDataGridViewTextBoxColumn});
+            this.salaryDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
             this.dgvPayments.DataSource = this.dataPaymentBindingSource;
-            this.dgvPayments.Location = new System.Drawing.Point(4, 26);
+            this.dgvPayments.Location = new System.Drawing.Point(3, 45);
             this.dgvPayments.Name = "dgvPayments";
             this.dgvPayments.RowHeadersVisible = false;
-            this.dgvPayments.Size = new System.Drawing.Size(677, 371);
+            this.dgvPayments.Size = new System.Drawing.Size(895, 315);
             this.dgvPayments.TabIndex = 2;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Имя";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // rankDataGridViewTextBoxColumn
-            // 
-            this.rankDataGridViewTextBoxColumn.DataPropertyName = "rank";
-            this.rankDataGridViewTextBoxColumn.HeaderText = "Звание";
-            this.rankDataGridViewTextBoxColumn.Name = "rankDataGridViewTextBoxColumn";
-            // 
-            // mondayDataGridViewTextBoxColumn
-            // 
-            this.mondayDataGridViewTextBoxColumn.DataPropertyName = "monday";
-            this.mondayDataGridViewTextBoxColumn.HeaderText = "Понедельник";
-            this.mondayDataGridViewTextBoxColumn.Name = "mondayDataGridViewTextBoxColumn";
-            // 
-            // tuesdayDataGridViewTextBoxColumn
-            // 
-            this.tuesdayDataGridViewTextBoxColumn.DataPropertyName = "tuesday";
-            this.tuesdayDataGridViewTextBoxColumn.HeaderText = "Вторник";
-            this.tuesdayDataGridViewTextBoxColumn.Name = "tuesdayDataGridViewTextBoxColumn";
-            // 
-            // wednesdayDataGridViewTextBoxColumn
-            // 
-            this.wednesdayDataGridViewTextBoxColumn.DataPropertyName = "wednesday";
-            this.wednesdayDataGridViewTextBoxColumn.HeaderText = "Среда";
-            this.wednesdayDataGridViewTextBoxColumn.Name = "wednesdayDataGridViewTextBoxColumn";
-            // 
-            // thursdayDataGridViewTextBoxColumn
-            // 
-            this.thursdayDataGridViewTextBoxColumn.DataPropertyName = "thursday";
-            this.thursdayDataGridViewTextBoxColumn.HeaderText = "Четверг";
-            this.thursdayDataGridViewTextBoxColumn.Name = "thursdayDataGridViewTextBoxColumn";
-            // 
-            // fridayDataGridViewTextBoxColumn
-            // 
-            this.fridayDataGridViewTextBoxColumn.DataPropertyName = "friday";
-            this.fridayDataGridViewTextBoxColumn.HeaderText = "Пятница";
-            this.fridayDataGridViewTextBoxColumn.Name = "fridayDataGridViewTextBoxColumn";
-            // 
-            // saturdayDataGridViewTextBoxColumn
-            // 
-            this.saturdayDataGridViewTextBoxColumn.DataPropertyName = "saturday";
-            this.saturdayDataGridViewTextBoxColumn.HeaderText = "Суббота";
-            this.saturdayDataGridViewTextBoxColumn.Name = "saturdayDataGridViewTextBoxColumn";
-            // 
-            // sundayDataGridViewTextBoxColumn
-            // 
-            this.sundayDataGridViewTextBoxColumn.DataPropertyName = "sunday";
-            this.sundayDataGridViewTextBoxColumn.HeaderText = "Воскресенье";
-            this.sundayDataGridViewTextBoxColumn.Name = "sundayDataGridViewTextBoxColumn";
-            // 
-            // summcoefDataGridViewTextBoxColumn
-            // 
-            this.summcoefDataGridViewTextBoxColumn.DataPropertyName = "summ_coef";
-            this.summcoefDataGridViewTextBoxColumn.HeaderText = "Сумма коэф.";
-            this.summcoefDataGridViewTextBoxColumn.Name = "summcoefDataGridViewTextBoxColumn";
-            // 
-            // efficiencyDataGridViewTextBoxColumn
-            // 
-            this.efficiencyDataGridViewTextBoxColumn.DataPropertyName = "efficiency";
-            this.efficiencyDataGridViewTextBoxColumn.HeaderText = "Эффективность";
-            this.efficiencyDataGridViewTextBoxColumn.Name = "efficiencyDataGridViewTextBoxColumn";
-            // 
-            // salaryDataGridViewTextBoxColumn
-            // 
-            this.salaryDataGridViewTextBoxColumn.DataPropertyName = "salary";
-            this.salaryDataGridViewTextBoxColumn.HeaderText = "Зарплата";
-            this.salaryDataGridViewTextBoxColumn.Name = "salaryDataGridViewTextBoxColumn";
             // 
             // dataPaymentBindingSource
             // 
@@ -414,58 +279,12 @@
             this.dataPayment.DataSetName = "DataPayment";
             this.dataPayment.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // metroNews
-            // 
-            this.metroNews.HorizontalScrollbarBarColor = true;
-            this.metroNews.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroNews.HorizontalScrollbarSize = 10;
-            this.metroNews.Location = new System.Drawing.Point(4, 38);
-            this.metroNews.Name = "metroNews";
-            this.metroNews.Size = new System.Drawing.Size(677, 400);
-            this.metroNews.TabIndex = 2;
-            this.metroNews.Text = "Новости";
-            this.metroNews.VerticalScrollbarBarColor = true;
-            this.metroNews.VerticalScrollbarHighlightOnWheel = false;
-            this.metroNews.VerticalScrollbarSize = 10;
-            // 
-            // metroInfo
-            // 
-            this.metroInfo.HorizontalScrollbarBarColor = true;
-            this.metroInfo.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroInfo.HorizontalScrollbarSize = 10;
-            this.metroInfo.Location = new System.Drawing.Point(4, 38);
-            this.metroInfo.Name = "metroInfo";
-            this.metroInfo.Size = new System.Drawing.Size(677, 400);
-            this.metroInfo.TabIndex = 3;
-            this.metroInfo.Text = "Информация";
-            this.metroInfo.VerticalScrollbarBarColor = true;
-            this.metroInfo.VerticalScrollbarHighlightOnWheel = false;
-            this.metroInfo.VerticalScrollbarSize = 10;
-            // 
-            // metroWithdrawal
-            // 
-            this.metroWithdrawal.HorizontalScrollbarBarColor = true;
-            this.metroWithdrawal.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroWithdrawal.HorizontalScrollbarSize = 10;
-            this.metroWithdrawal.Location = new System.Drawing.Point(4, 38);
-            this.metroWithdrawal.Name = "metroWithdrawal";
-            this.metroWithdrawal.Size = new System.Drawing.Size(677, 400);
-            this.metroWithdrawal.TabIndex = 5;
-            this.metroWithdrawal.Text = "Вывод средств";
-            this.metroWithdrawal.VerticalScrollbarBarColor = true;
-            this.metroWithdrawal.VerticalScrollbarHighlightOnWheel = false;
-            this.metroWithdrawal.VerticalScrollbarSize = 10;
-            // 
-            // dataTable1TableAdapter
-            // 
-            this.dataTable1TableAdapter.ClearBeforeFill = true;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Reg.Properties.Resources.logo_title;
-            this.pictureBox1.Location = new System.Drawing.Point(-15, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(0, -15);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 153);
+            this.pictureBox1.Size = new System.Drawing.Size(108, 106);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
@@ -481,9 +300,9 @@
             this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(178, 150);
+            this.listBox1.Location = new System.Drawing.Point(12, 99);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(188, 344);
+            this.listBox1.Size = new System.Drawing.Size(196, 284);
             this.listBox1.TabIndex = 35;
             // 
             // dataLineUpBindingSource
@@ -500,7 +319,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(174, 120);
+            this.label1.Location = new System.Drawing.Point(10, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 24);
             this.label1.TabIndex = 36;
@@ -510,7 +329,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(174, 56);
+            this.label6.Location = new System.Drawing.Point(8, 11);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(181, 24);
             this.label6.TabIndex = 37;
@@ -520,35 +339,123 @@
             // 
             this.dataTable1TableAdapter1.ClearBeforeFill = true;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.MediumPurple;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 513);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1147, 28);
+            this.panel2.TabIndex = 38;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.label16);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.txtUserName);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.txtRole);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.txtRank);
+            this.panel3.Location = new System.Drawing.Point(0, 25);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1147, 78);
+            this.panel3.TabIndex = 39;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.Location = new System.Drawing.Point(125, 29);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(40, 20);
+            this.label16.TabIndex = 27;
+            this.label16.Text = "Имя";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1013, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 46);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Переход к управлению";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.manageButton);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.cmbTeams);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.listBox1);
+            this.panel4.Location = new System.Drawing.Point(0, 109);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(220, 398);
+            this.panel4.TabIndex = 40;
+            // 
+            // dataTable1TableAdapter
+            // 
+            this.dataTable1TableAdapter.ClearBeforeFill = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Имя работника";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // rankDataGridViewTextBoxColumn
+            // 
+            this.rankDataGridViewTextBoxColumn.DataPropertyName = "rank";
+            this.rankDataGridViewTextBoxColumn.HeaderText = "Звание";
+            this.rankDataGridViewTextBoxColumn.Name = "rankDataGridViewTextBoxColumn";
+            // 
+            // summcoefDataGridViewTextBoxColumn
+            // 
+            this.summcoefDataGridViewTextBoxColumn.DataPropertyName = "summ_coef";
+            this.summcoefDataGridViewTextBoxColumn.HeaderText = "Сумма коэффициентов";
+            this.summcoefDataGridViewTextBoxColumn.Name = "summcoefDataGridViewTextBoxColumn";
+            // 
+            // efficiencyDataGridViewTextBoxColumn
+            // 
+            this.efficiencyDataGridViewTextBoxColumn.DataPropertyName = "efficiency";
+            this.efficiencyDataGridViewTextBoxColumn.HeaderText = "Эффективность";
+            this.efficiencyDataGridViewTextBoxColumn.Name = "efficiencyDataGridViewTextBoxColumn";
+            // 
+            // salaryDataGridViewTextBoxColumn
+            // 
+            this.salaryDataGridViewTextBoxColumn.DataPropertyName = "salary";
+            this.salaryDataGridViewTextBoxColumn.HeaderText = "Зарплата";
+            this.salaryDataGridViewTextBoxColumn.Name = "salaryDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "current_week";
+            this.dataGridViewTextBoxColumn1.HeaderText = "current_week";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "team_name";
+            this.dataGridViewTextBoxColumn2.HeaderText = "team_name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Visible = false;
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1147, 541);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.tabPanel);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.btnExit2);
-            this.Controls.Add(this.btnAdminForm);
-            this.Controls.Add(this.btnWithdrawal);
-            this.Controls.Add(this.btnPayments);
-            this.Controls.Add(this.btnInfo);
-            this.Controls.Add(this.btnNews);
-            this.Controls.Add(this.txtWallet);
-            this.Controls.Add(this.txtRank);
-            this.Controls.Add(this.txtRole);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.cmbTeams);
-            this.Controls.Add(this.txtUserName);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -556,15 +463,19 @@
             this.Load += new System.EventHandler(this.UserForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.teamsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTeams)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.tabPanel.ResumeLayout(false);
             this.metroPayments.ResumeLayout(false);
+            this.metroPayments.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataPaymentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataPayment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLineUpBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLineUp)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -577,32 +488,14 @@
         private System.Windows.Forms.ComboBox cmbTeams;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label txtRole;
         private System.Windows.Forms.Label txtRank;
-        private System.Windows.Forms.Label txtWallet;
-        private System.Windows.Forms.Button btnNews;
-        private System.Windows.Forms.Button btnInfo;
-        private System.Windows.Forms.Button btnWithdrawal;
-        private System.Windows.Forms.Button btnPayments;
-        private System.Windows.Forms.Button btnAdminForm;
-        private System.Windows.Forms.Button btnExit2;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnExit;
         private MetroFramework.Controls.MetroTabControl tabPanel;
-        private MetroFramework.Controls.MetroTabPage metroNews;
-        private MetroFramework.Controls.MetroTabPage metroInfo;
         private MetroFramework.Controls.MetroTabPage metroPayments;
-        private MetroFramework.Controls.MetroTabPage metroWithdrawal;
         private System.Windows.Forms.DataGridView dgvPayments;
-        private System.Windows.Forms.BindingSource dataPaymentBindingSource;
-        private DataPayment dataPayment;
         private System.Windows.Forms.DataGridViewTextBoxColumn teamnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn currentweekDataGridViewTextBoxColumn;
-        private DataPaymentTableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rankDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mondayDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tuesdayDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn wednesdayDataGridViewTextBoxColumn;
@@ -610,9 +503,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fridayDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn saturdayDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sundayDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn summcoefDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn efficiencyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn salaryDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource teamsBindingSource;
         private DataTeams dataTeams;
         private DataTeamsTableAdapters.TeamsTableAdapter teamsTableAdapter;
@@ -622,6 +512,25 @@
         private System.Windows.Forms.BindingSource dataLineUpBindingSource;
         private DataLineUp dataLineUp;
         private DataLineUpTableAdapters.DataTable1TableAdapter dataTable1TableAdapter1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label txtCurrentWeek;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmbNumbersWeek;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.BindingSource dataPaymentBindingSource;
+        private DataPayment dataPayment;
+        private DataPaymentTableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rankDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn summcoefDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn efficiencyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salaryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }
 

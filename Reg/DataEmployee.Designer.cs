@@ -20,9 +20,9 @@ namespace Reg {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataPayment")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataEmployee")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataPayment : global::System.Data.DataSet {
+    public partial class DataEmployee : global::System.Data.DataSet {
         
         private DataTable1DataTable tableDataTable1;
         
@@ -30,7 +30,7 @@ namespace Reg {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public DataPayment() {
+        public DataEmployee() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Reg {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected DataPayment(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataEmployee(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace Reg {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataPayment cln = ((DataPayment)(base.Clone()));
+            DataEmployee cln = ((DataEmployee)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace Reg {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataPayment";
+            this.DataSetName = "DataEmployee";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataPayment.xsd";
+            this.Namespace = "http://tempuri.org/DataEmployee.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableDataTable1 = new DataTable1DataTable();
@@ -225,7 +225,7 @@ namespace Reg {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataPayment ds = new DataPayment();
+            DataEmployee ds = new DataEmployee();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -279,21 +279,15 @@ namespace Reg {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
             
-            private global::System.Data.DataColumn columncurrent_week;
-            
-            private global::System.Data.DataColumn columnsumm_coef;
-            
-            private global::System.Data.DataColumn columnefficiency;
-            
-            private global::System.Data.DataColumn columnsalary;
+            private global::System.Data.DataColumn columnid;
             
             private global::System.Data.DataColumn columnname;
             
-            private global::System.Data.DataColumn columnteam_name;
+            private global::System.Data.DataColumn columncurrent_week;
             
-            private global::System.Data.DataColumn columnrank;
+            private global::System.Data.DataColumn columnsalary;
             
-            private global::System.Data.DataColumn columnid;
+            private global::System.Data.DataColumn columnteam_id;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -330,33 +324,9 @@ namespace Reg {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn current_weekColumn {
+            public global::System.Data.DataColumn idColumn {
                 get {
-                    return this.columncurrent_week;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn summ_coefColumn {
-                get {
-                    return this.columnsumm_coef;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn efficiencyColumn {
-                get {
-                    return this.columnefficiency;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn salaryColumn {
-                get {
-                    return this.columnsalary;
+                    return this.columnid;
                 }
             }
             
@@ -370,25 +340,25 @@ namespace Reg {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn team_nameColumn {
+            public global::System.Data.DataColumn current_weekColumn {
                 get {
-                    return this.columnteam_name;
+                    return this.columncurrent_week;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn rankColumn {
+            public global::System.Data.DataColumn salaryColumn {
                 get {
-                    return this.columnrank;
+                    return this.columnsalary;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn idColumn {
+            public global::System.Data.DataColumn team_idColumn {
                 get {
-                    return this.columnid;
+                    return this.columnteam_id;
                 }
             }
             
@@ -429,17 +399,14 @@ namespace Reg {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable1Row AddDataTable1Row(int current_week, int summ_coef, double efficiency, int salary, string name, string team_name, string rank) {
+            public DataTable1Row AddDataTable1Row(string name, int current_week, int salary, int team_id) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        current_week,
-                        summ_coef,
-                        efficiency,
-                        salary,
+                        null,
                         name,
-                        team_name,
-                        rank,
-                        null};
+                        current_week,
+                        salary,
+                        team_id};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
                 return rowDataTable1Row;
@@ -469,51 +436,39 @@ namespace Reg {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columncurrent_week = base.Columns["current_week"];
-                this.columnsumm_coef = base.Columns["summ_coef"];
-                this.columnefficiency = base.Columns["efficiency"];
-                this.columnsalary = base.Columns["salary"];
-                this.columnname = base.Columns["name"];
-                this.columnteam_name = base.Columns["team_name"];
-                this.columnrank = base.Columns["rank"];
                 this.columnid = base.Columns["id"];
+                this.columnname = base.Columns["name"];
+                this.columncurrent_week = base.Columns["current_week"];
+                this.columnsalary = base.Columns["salary"];
+                this.columnteam_id = base.Columns["team_id"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columncurrent_week = new global::System.Data.DataColumn("current_week", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncurrent_week);
-                this.columnsumm_coef = new global::System.Data.DataColumn("summ_coef", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsumm_coef);
-                this.columnefficiency = new global::System.Data.DataColumn("efficiency", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnefficiency);
-                this.columnsalary = new global::System.Data.DataColumn("salary", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsalary);
-                this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnname);
-                this.columnteam_name = new global::System.Data.DataColumn("team_name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnteam_name);
-                this.columnrank = new global::System.Data.DataColumn("rank", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnrank);
                 this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid);
+                this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnname);
+                this.columncurrent_week = new global::System.Data.DataColumn("current_week", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncurrent_week);
+                this.columnsalary = new global::System.Data.DataColumn("salary", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsalary);
+                this.columnteam_id = new global::System.Data.DataColumn("team_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnteam_id);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
-                this.columncurrent_week.AllowDBNull = false;
-                this.columnsalary.AllowDBNull = false;
-                this.columnname.AllowDBNull = false;
-                this.columnname.MaxLength = 50;
-                this.columnteam_name.AllowDBNull = false;
-                this.columnteam_name.MaxLength = 50;
-                this.columnrank.AllowDBNull = false;
-                this.columnrank.MaxLength = 50;
                 this.columnid.AutoIncrement = true;
                 this.columnid.AutoIncrementSeed = -1;
                 this.columnid.AutoIncrementStep = -1;
                 this.columnid.AllowDBNull = false;
                 this.columnid.ReadOnly = true;
                 this.columnid.Unique = true;
+                this.columnname.AllowDBNull = false;
+                this.columnname.MaxLength = 50;
+                this.columncurrent_week.AllowDBNull = false;
+                this.columnsalary.AllowDBNull = false;
+                this.columnteam_id.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -581,7 +536,7 @@ namespace Reg {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataPayment ds = new DataPayment();
+                DataEmployee ds = new DataEmployee();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -656,55 +611,12 @@ namespace Reg {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int current_week {
+            public int id {
                 get {
-                    return ((int)(this[this.tableDataTable1.current_weekColumn]));
+                    return ((int)(this[this.tableDataTable1.idColumn]));
                 }
                 set {
-                    this[this.tableDataTable1.current_weekColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int summ_coef {
-                get {
-                    try {
-                        return ((int)(this[this.tableDataTable1.summ_coefColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'summ_coef\' в таблице \'DataTable1\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.summ_coefColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public double efficiency {
-                get {
-                    try {
-                        return ((double)(this[this.tableDataTable1.efficiencyColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'efficiency\' в таблице \'DataTable1\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.efficiencyColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int salary {
-                get {
-                    return ((int)(this[this.tableDataTable1.salaryColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.salaryColumn] = value;
+                    this[this.tableDataTable1.idColumn] = value;
                 }
             }
             
@@ -721,59 +633,35 @@ namespace Reg {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string team_name {
+            public int current_week {
                 get {
-                    return ((string)(this[this.tableDataTable1.team_nameColumn]));
+                    return ((int)(this[this.tableDataTable1.current_weekColumn]));
                 }
                 set {
-                    this[this.tableDataTable1.team_nameColumn] = value;
+                    this[this.tableDataTable1.current_weekColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string rank {
+            public int salary {
                 get {
-                    return ((string)(this[this.tableDataTable1.rankColumn]));
+                    return ((int)(this[this.tableDataTable1.salaryColumn]));
                 }
                 set {
-                    this[this.tableDataTable1.rankColumn] = value;
+                    this[this.tableDataTable1.salaryColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int id {
+            public int team_id {
                 get {
-                    return ((int)(this[this.tableDataTable1.idColumn]));
+                    return ((int)(this[this.tableDataTable1.team_idColumn]));
                 }
                 set {
-                    this[this.tableDataTable1.idColumn] = value;
+                    this[this.tableDataTable1.team_idColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Issumm_coefNull() {
-                return this.IsNull(this.tableDataTable1.summ_coefColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setsumm_coefNull() {
-                this[this.tableDataTable1.summ_coefColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsefficiencyNull() {
-                return this.IsNull(this.tableDataTable1.efficiencyColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetefficiencyNull() {
-                this[this.tableDataTable1.efficiencyColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -812,7 +700,7 @@ namespace Reg {
         }
     }
 }
-namespace Reg.DataPaymentTableAdapters {
+namespace Reg.DataEmployeeTableAdapters {
     
     
     /// <summary>
@@ -936,14 +824,11 @@ namespace Reg.DataPaymentTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "DataTable1";
-            tableMapping.ColumnMappings.Add("current_week", "current_week");
-            tableMapping.ColumnMappings.Add("summ_coef", "summ_coef");
-            tableMapping.ColumnMappings.Add("efficiency", "efficiency");
-            tableMapping.ColumnMappings.Add("salary", "salary");
-            tableMapping.ColumnMappings.Add("name", "name");
-            tableMapping.ColumnMappings.Add("team_name", "team_name");
-            tableMapping.ColumnMappings.Add("rank", "rank");
             tableMapping.ColumnMappings.Add("id", "id");
+            tableMapping.ColumnMappings.Add("name", "name");
+            tableMapping.ColumnMappings.Add("current_week", "current_week");
+            tableMapping.ColumnMappings.Add("salary", "salary");
+            tableMapping.ColumnMappings.Add("team_id", "team_id");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -960,11 +845,9 @@ namespace Reg.DataPaymentTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Payments.current_week, Payments.summ_coef, Payments.efficiency, Payments.salary, Users.name, Teams.team_name, Ranks.rank, Payments.id
-FROM            Payments INNER JOIN
-                         Users ON Payments.user_id = Users.id INNER JOIN
-                         Teams ON Payments.team_id = Teams.id INNER JOIN
-                         Ranks ON Users.rank_id = Ranks.id";
+            this._commandCollection[0].CommandText = "SELECT        Users.name, Payments.current_week, Payments.salary, Payments.team_i" +
+                "d, Users.id\r\nFROM            Users INNER JOIN\r\n                         Payments" +
+                " ON Users.id = Payments.user_id\r\nWHERE        (Payments.salary = 0)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -972,7 +855,7 @@ FROM            Payments INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataPayment.DataTable1DataTable dataTable) {
+        public virtual int Fill(DataEmployee.DataTable1DataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -985,9 +868,9 @@ FROM            Payments INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataPayment.DataTable1DataTable GetData() {
+        public virtual DataEmployee.DataTable1DataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataPayment.DataTable1DataTable dataTable = new DataPayment.DataTable1DataTable();
+            DataEmployee.DataTable1DataTable dataTable = new DataEmployee.DataTable1DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1061,7 +944,7 @@ FROM            Payments INNER JOIN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(DataPayment dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DataEmployee dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1071,7 +954,7 @@ FROM            Payments INNER JOIN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(DataPayment dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DataEmployee dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1081,7 +964,7 @@ FROM            Payments INNER JOIN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(DataPayment dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DataEmployee dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1115,7 +998,7 @@ FROM            Payments INNER JOIN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(DataPayment dataSet) {
+        public virtual int UpdateAll(DataEmployee dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

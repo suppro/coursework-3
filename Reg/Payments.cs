@@ -18,16 +18,9 @@ namespace Reg
         public int user_id { get; set; }
         public int team_id { get; set; }
         public int current_week { get; set; }
-        public int monday { get; set; }
-        public int tuesday { get; set; }
-        public int wednesday { get; set; }
-        public int thursday { get; set; }
-        public int friday { get; set; }
-        public int saturday { get; set; }
-        public int sunday { get; set; }
-        public double summ_coef { get; set; }
-        public double efficiency { get; set; }
-        public decimal salary { get; set; }
+        public Nullable<int> summ_coef { get; set; }
+        public Nullable<double> efficiency { get; set; }
+        public int salary { get; set; }
     
         public virtual Teams Teams { get; set; }
         public virtual Users Users { get; set; }

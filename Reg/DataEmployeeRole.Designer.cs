@@ -20,17 +20,17 @@ namespace Reg {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataNews")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataEmployeeRole")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataNews : global::System.Data.DataSet {
+    public partial class DataEmployeeRole : global::System.Data.DataSet {
         
-        private NewsDataTable tableNews;
+        private RoleDataTable tableRole;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public DataNews() {
+        public DataEmployeeRole() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Reg {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected DataNews(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataEmployeeRole(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Reg {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["News"] != null)) {
-                    base.Tables.Add(new NewsDataTable(ds.Tables["News"]));
+                if ((ds.Tables["Role"] != null)) {
+                    base.Tables.Add(new RoleDataTable(ds.Tables["Role"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Reg {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public NewsDataTable News {
+        public RoleDataTable Role {
             get {
-                return this.tableNews;
+                return this.tableRole;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Reg {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataNews cln = ((DataNews)(base.Clone()));
+            DataEmployeeRole cln = ((DataEmployeeRole)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Reg {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["News"] != null)) {
-                    base.Tables.Add(new NewsDataTable(ds.Tables["News"]));
+                if ((ds.Tables["Role"] != null)) {
+                    base.Tables.Add(new RoleDataTable(ds.Tables["Role"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Reg {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableNews = ((NewsDataTable)(base.Tables["News"]));
+            this.tableRole = ((RoleDataTable)(base.Tables["Role"]));
             if ((initTable == true)) {
-                if ((this.tableNews != null)) {
-                    this.tableNews.InitVars();
+                if ((this.tableRole != null)) {
+                    this.tableRole.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Reg {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataNews";
+            this.DataSetName = "DataEmployeeRole";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataNews.xsd";
+            this.Namespace = "http://tempuri.org/DataEmployeeRole.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableNews = new NewsDataTable();
-            base.Tables.Add(this.tableNews);
+            this.tableRole = new RoleDataTable();
+            base.Tables.Add(this.tableRole);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeNews() {
+        private bool ShouldSerializeRole() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Reg {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataNews ds = new DataNews();
+            DataEmployeeRole ds = new DataEmployeeRole();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,27 +270,23 @@ namespace Reg {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void NewsRowChangeEventHandler(object sender, NewsRowChangeEvent e);
+        public delegate void RoleRowChangeEventHandler(object sender, RoleRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class NewsDataTable : global::System.Data.TypedTableBase<NewsRow> {
-            
-            private global::System.Data.DataColumn columndate_post;
-            
-            private global::System.Data.DataColumn columntopic;
-            
-            private global::System.Data.DataColumn columnpost;
+        public partial class RoleDataTable : global::System.Data.TypedTableBase<RoleRow> {
             
             private global::System.Data.DataColumn columnid;
             
+            private global::System.Data.DataColumn columnrole;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public NewsDataTable() {
-                this.TableName = "News";
+            public RoleDataTable() {
+                this.TableName = "Role";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +294,7 @@ namespace Reg {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal NewsDataTable(global::System.Data.DataTable table) {
+            internal RoleDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,33 +311,9 @@ namespace Reg {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected NewsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected RoleDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn date_postColumn {
-                get {
-                    return this.columndate_post;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn topicColumn {
-                get {
-                    return this.columntopic;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn postColumn {
-                get {
-                    return this.columnpost;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -349,6 +321,14 @@ namespace Reg {
             public global::System.Data.DataColumn idColumn {
                 get {
                     return this.columnid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn roleColumn {
+                get {
+                    return this.columnrole;
                 }
             }
             
@@ -363,55 +343,53 @@ namespace Reg {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public NewsRow this[int index] {
+            public RoleRow this[int index] {
                 get {
-                    return ((NewsRow)(this.Rows[index]));
+                    return ((RoleRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event NewsRowChangeEventHandler NewsRowChanging;
+            public event RoleRowChangeEventHandler RoleRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event NewsRowChangeEventHandler NewsRowChanged;
+            public event RoleRowChangeEventHandler RoleRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event NewsRowChangeEventHandler NewsRowDeleting;
+            public event RoleRowChangeEventHandler RoleRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event NewsRowChangeEventHandler NewsRowDeleted;
+            public event RoleRowChangeEventHandler RoleRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddNewsRow(NewsRow row) {
+            public void AddRoleRow(RoleRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public NewsRow AddNewsRow(System.DateTime date_post, string topic, string post) {
-                NewsRow rowNewsRow = ((NewsRow)(this.NewRow()));
+            public RoleRow AddRoleRow(string role) {
+                RoleRow rowRoleRow = ((RoleRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        date_post,
-                        topic,
-                        post,
-                        null};
-                rowNewsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowNewsRow);
-                return rowNewsRow;
+                        null,
+                        role};
+                rowRoleRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowRoleRow);
+                return rowRoleRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public NewsRow FindByid(int id) {
-                return ((NewsRow)(this.Rows.Find(new object[] {
+            public RoleRow FindByid(int id) {
+                return ((RoleRow)(this.Rows.Find(new object[] {
                             id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                NewsDataTable cln = ((NewsDataTable)(base.Clone()));
+                RoleDataTable cln = ((RoleDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -419,68 +397,59 @@ namespace Reg {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new NewsDataTable();
+                return new RoleDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columndate_post = base.Columns["date_post"];
-                this.columntopic = base.Columns["topic"];
-                this.columnpost = base.Columns["post"];
                 this.columnid = base.Columns["id"];
+                this.columnrole = base.Columns["role"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columndate_post = new global::System.Data.DataColumn("date_post", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndate_post);
-                this.columntopic = new global::System.Data.DataColumn("topic", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntopic);
-                this.columnpost = new global::System.Data.DataColumn("post", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpost);
                 this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid);
+                this.columnrole = new global::System.Data.DataColumn("role", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrole);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
-                this.columndate_post.AllowDBNull = false;
-                this.columntopic.AllowDBNull = false;
-                this.columntopic.MaxLength = 50;
-                this.columnpost.AllowDBNull = false;
-                this.columnpost.MaxLength = 2147483647;
                 this.columnid.AutoIncrement = true;
                 this.columnid.AutoIncrementSeed = -1;
                 this.columnid.AutoIncrementStep = -1;
                 this.columnid.AllowDBNull = false;
                 this.columnid.ReadOnly = true;
                 this.columnid.Unique = true;
+                this.columnrole.AllowDBNull = false;
+                this.columnrole.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public NewsRow NewNewsRow() {
-                return ((NewsRow)(this.NewRow()));
+            public RoleRow NewRoleRow() {
+                return ((RoleRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new NewsRow(builder);
+                return new RoleRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(NewsRow);
+                return typeof(RoleRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.NewsRowChanged != null)) {
-                    this.NewsRowChanged(this, new NewsRowChangeEvent(((NewsRow)(e.Row)), e.Action));
+                if ((this.RoleRowChanged != null)) {
+                    this.RoleRowChanged(this, new RoleRowChangeEvent(((RoleRow)(e.Row)), e.Action));
                 }
             }
             
@@ -488,8 +457,8 @@ namespace Reg {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.NewsRowChanging != null)) {
-                    this.NewsRowChanging(this, new NewsRowChangeEvent(((NewsRow)(e.Row)), e.Action));
+                if ((this.RoleRowChanging != null)) {
+                    this.RoleRowChanging(this, new RoleRowChangeEvent(((RoleRow)(e.Row)), e.Action));
                 }
             }
             
@@ -497,8 +466,8 @@ namespace Reg {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.NewsRowDeleted != null)) {
-                    this.NewsRowDeleted(this, new NewsRowChangeEvent(((NewsRow)(e.Row)), e.Action));
+                if ((this.RoleRowDeleted != null)) {
+                    this.RoleRowDeleted(this, new RoleRowChangeEvent(((RoleRow)(e.Row)), e.Action));
                 }
             }
             
@@ -506,14 +475,14 @@ namespace Reg {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.NewsRowDeleting != null)) {
-                    this.NewsRowDeleting(this, new NewsRowChangeEvent(((NewsRow)(e.Row)), e.Action));
+                if ((this.RoleRowDeleting != null)) {
+                    this.RoleRowDeleting(this, new RoleRowChangeEvent(((RoleRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveNewsRow(NewsRow row) {
+            public void RemoveRoleRow(RoleRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -522,7 +491,7 @@ namespace Reg {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataNews ds = new DataNews();
+                DataEmployeeRole ds = new DataEmployeeRole();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -540,7 +509,7 @@ namespace Reg {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "NewsDataTable";
+                attribute2.FixedValue = "RoleDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -584,58 +553,36 @@ namespace Reg {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class NewsRow : global::System.Data.DataRow {
+        public partial class RoleRow : global::System.Data.DataRow {
             
-            private NewsDataTable tableNews;
+            private RoleDataTable tableRole;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal NewsRow(global::System.Data.DataRowBuilder rb) : 
+            internal RoleRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableNews = ((NewsDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime date_post {
-                get {
-                    return ((global::System.DateTime)(this[this.tableNews.date_postColumn]));
-                }
-                set {
-                    this[this.tableNews.date_postColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string topic {
-                get {
-                    return ((string)(this[this.tableNews.topicColumn]));
-                }
-                set {
-                    this[this.tableNews.topicColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string post {
-                get {
-                    return ((string)(this[this.tableNews.postColumn]));
-                }
-                set {
-                    this[this.tableNews.postColumn] = value;
-                }
+                this.tableRole = ((RoleDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int id {
                 get {
-                    return ((int)(this[this.tableNews.idColumn]));
+                    return ((int)(this[this.tableRole.idColumn]));
                 }
                 set {
-                    this[this.tableNews.idColumn] = value;
+                    this[this.tableRole.idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string role {
+                get {
+                    return ((string)(this[this.tableRole.roleColumn]));
+                }
+                set {
+                    this[this.tableRole.roleColumn] = value;
                 }
             }
         }
@@ -644,22 +591,22 @@ namespace Reg {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class NewsRowChangeEvent : global::System.EventArgs {
+        public class RoleRowChangeEvent : global::System.EventArgs {
             
-            private NewsRow eventRow;
+            private RoleRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public NewsRowChangeEvent(NewsRow row, global::System.Data.DataRowAction action) {
+            public RoleRowChangeEvent(RoleRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public NewsRow Row {
+            public RoleRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -675,7 +622,7 @@ namespace Reg {
         }
     }
 }
-namespace Reg.DataNewsTableAdapters {
+namespace Reg.DataEmployeeRoleTableAdapters {
     
     
     /// <summary>
@@ -687,7 +634,7 @@ namespace Reg.DataNewsTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class NewsTableAdapter : global::System.ComponentModel.Component {
+    public partial class RoleTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -701,7 +648,7 @@ namespace Reg.DataNewsTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public NewsTableAdapter() {
+        public RoleTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -798,41 +745,30 @@ namespace Reg.DataNewsTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "News";
-            tableMapping.ColumnMappings.Add("date_post", "date_post");
-            tableMapping.ColumnMappings.Add("topic", "topic");
-            tableMapping.ColumnMappings.Add("post", "post");
+            tableMapping.DataSetTable = "Role";
             tableMapping.ColumnMappings.Add("id", "id");
+            tableMapping.ColumnMappings.Add("role", "role");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [News] WHERE (([date_post] = @Original_date_post) AND ([topic] = @Ori" +
-                "ginal_topic) AND ([id] = @Original_id))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Role] WHERE (([id] = @Original_id) AND ([role] = @Original_role))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_post", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_post", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_topic", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "topic", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_role", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "role", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [News] ([date_post], [topic], [post]) VALUES (@date_post, @topic, @po" +
-                "st);\r\nSELECT date_post, topic, post, id FROM News WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Role] ([role]) VALUES (@role);\r\nSELECT id, role FROM Role WHERE (id " +
+                "= SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_post", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_post", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@topic", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "topic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@post", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "post", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@role", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "role", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [News] SET [date_post] = @date_post, [topic] = @topic, [post] = @post WHER" +
-                "E (([date_post] = @Original_date_post) AND ([topic] = @Original_topic) AND ([id]" +
-                " = @Original_id));\r\nSELECT date_post, topic, post, id FROM News WHERE (id = @id)" +
-                "";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [Role] SET [role] = @role WHERE (([id] = @Original_id) AND ([role] = @Orig" +
+                "inal_role));\r\nSELECT id, role FROM Role WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_post", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_post", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@topic", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "topic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@post", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "post", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_post", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_post", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_topic", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "topic", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@role", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "role", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_role", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "role", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -849,7 +785,7 @@ namespace Reg.DataNewsTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT date_post, topic, post, id FROM News";
+            this._commandCollection[0].CommandText = "SELECT        id, role\r\nFROM            Role";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -857,7 +793,7 @@ namespace Reg.DataNewsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataNews.NewsDataTable dataTable) {
+        public virtual int Fill(DataEmployeeRole.RoleDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -870,9 +806,9 @@ namespace Reg.DataNewsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataNews.NewsDataTable GetData() {
+        public virtual DataEmployeeRole.RoleDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataNews.NewsDataTable dataTable = new DataNews.NewsDataTable();
+            DataEmployeeRole.RoleDataTable dataTable = new DataEmployeeRole.RoleDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -880,15 +816,15 @@ namespace Reg.DataNewsTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataNews.NewsDataTable dataTable) {
+        public virtual int Update(DataEmployeeRole.RoleDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataNews dataSet) {
-            return this.Adapter.Update(dataSet, "News");
+        public virtual int Update(DataEmployeeRole dataSet) {
+            return this.Adapter.Update(dataSet, "Role");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -910,15 +846,14 @@ namespace Reg.DataNewsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(System.DateTime Original_date_post, string Original_topic, int Original_id) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((System.DateTime)(Original_date_post));
-            if ((Original_topic == null)) {
-                throw new global::System.ArgumentNullException("Original_topic");
+        public virtual int Delete(int Original_id, string Original_role) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
+            if ((Original_role == null)) {
+                throw new global::System.ArgumentNullException("Original_role");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_topic));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_role));
             }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -939,19 +874,12 @@ namespace Reg.DataNewsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(System.DateTime date_post, string topic, string post) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(date_post));
-            if ((topic == null)) {
-                throw new global::System.ArgumentNullException("topic");
+        public virtual int Insert(string role) {
+            if ((role == null)) {
+                throw new global::System.ArgumentNullException("role");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(topic));
-            }
-            if ((post == null)) {
-                throw new global::System.ArgumentNullException("post");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(post));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(role));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -973,29 +901,21 @@ namespace Reg.DataNewsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime date_post, string topic, string post, System.DateTime Original_date_post, string Original_topic, int Original_id, int id) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(date_post));
-            if ((topic == null)) {
-                throw new global::System.ArgumentNullException("topic");
+        public virtual int Update(string role, int Original_id, string Original_role, int id) {
+            if ((role == null)) {
+                throw new global::System.ArgumentNullException("role");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(topic));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(role));
             }
-            if ((post == null)) {
-                throw new global::System.ArgumentNullException("post");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(post));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(Original_date_post));
-            if ((Original_topic == null)) {
-                throw new global::System.ArgumentNullException("Original_topic");
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_id));
+            if ((Original_role == null)) {
+                throw new global::System.ArgumentNullException("Original_role");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_topic));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_role));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_id));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(id));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1016,8 +936,8 @@ namespace Reg.DataNewsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime date_post, string topic, string post, System.DateTime Original_date_post, string Original_topic, int Original_id) {
-            return this.Update(date_post, topic, post, Original_date_post, Original_topic, Original_id, Original_id);
+        public virtual int Update(string role, int Original_id, string Original_role) {
+            return this.Update(role, Original_id, Original_role, Original_id);
         }
     }
     
@@ -1033,7 +953,7 @@ namespace Reg.DataNewsTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private NewsTableAdapter _newsTableAdapter;
+        private RoleTableAdapter _roleTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1055,12 +975,12 @@ namespace Reg.DataNewsTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public NewsTableAdapter NewsTableAdapter {
+        public RoleTableAdapter RoleTableAdapter {
             get {
-                return this._newsTableAdapter;
+                return this._roleTableAdapter;
             }
             set {
-                this._newsTableAdapter = value;
+                this._roleTableAdapter = value;
             }
         }
         
@@ -1083,9 +1003,9 @@ namespace Reg.DataNewsTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._newsTableAdapter != null) 
-                            && (this._newsTableAdapter.Connection != null))) {
-                    return this._newsTableAdapter.Connection;
+                if (((this._roleTableAdapter != null) 
+                            && (this._roleTableAdapter.Connection != null))) {
+                    return this._roleTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1100,7 +1020,7 @@ namespace Reg.DataNewsTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._newsTableAdapter != null)) {
+                if ((this._roleTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1112,14 +1032,14 @@ namespace Reg.DataNewsTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(DataNews dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DataEmployeeRole dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._newsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.News.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._roleTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Role.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._newsTableAdapter.Update(updatedRows));
+                    result = (result + this._roleTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1131,13 +1051,13 @@ namespace Reg.DataNewsTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(DataNews dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DataEmployeeRole dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._newsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.News.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._roleTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Role.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._newsTableAdapter.Update(addedRows));
+                    result = (result + this._roleTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1149,13 +1069,13 @@ namespace Reg.DataNewsTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(DataNews dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DataEmployeeRole dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._newsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.News.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._roleTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Role.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._newsTableAdapter.Update(deletedRows));
+                    result = (result + this._roleTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1191,15 +1111,15 @@ namespace Reg.DataNewsTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(DataNews dataSet) {
+        public virtual int UpdateAll(DataEmployeeRole dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._newsTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._newsTableAdapter.Connection) == false))) {
+            if (((this._roleTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._roleTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
@@ -1235,13 +1155,13 @@ namespace Reg.DataNewsTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._newsTableAdapter != null)) {
-                    revertConnections.Add(this._newsTableAdapter, this._newsTableAdapter.Connection);
-                    this._newsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._newsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._newsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._newsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._newsTableAdapter.Adapter);
+                if ((this._roleTableAdapter != null)) {
+                    revertConnections.Add(this._roleTableAdapter, this._roleTableAdapter.Connection);
+                    this._roleTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._roleTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._roleTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._roleTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._roleTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1302,9 +1222,9 @@ namespace Reg.DataNewsTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._newsTableAdapter != null)) {
-                    this._newsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._newsTableAdapter]));
-                    this._newsTableAdapter.Transaction = null;
+                if ((this._roleTableAdapter != null)) {
+                    this._roleTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._roleTableAdapter]));
+                    this._roleTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

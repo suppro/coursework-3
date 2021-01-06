@@ -5,15 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="Хранилище REGDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="News">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="topic" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="post" Type="varchar(max)" Nullable="false" />
-          <Property Name="date_post" Type="date" Nullable="false" />
-        </EntityType>
         <EntityType Name="Payments">
           <Key>
             <PropertyRef Name="id" />
@@ -22,16 +13,9 @@
           <Property Name="user_id" Type="int" Nullable="false" />
           <Property Name="team_id" Type="int" Nullable="false" />
           <Property Name="current_week" Type="int" Nullable="false" />
-          <Property Name="monday" Type="int" Nullable="false" />
-          <Property Name="tuesday" Type="int" Nullable="false" />
-          <Property Name="wednesday" Type="int" Nullable="false" />
-          <Property Name="thursday" Type="int" Nullable="false" />
-          <Property Name="friday" Type="int" Nullable="false" />
-          <Property Name="saturday" Type="int" Nullable="false" />
-          <Property Name="sunday" Type="int" Nullable="false" />
-          <Property Name="summ_coef" Type="float" Nullable="false" />
-          <Property Name="efficiency" Type="float" Nullable="false" />
-          <Property Name="salary" Type="smallmoney" Nullable="false" />
+          <Property Name="summ_coef" Type="int" />
+          <Property Name="efficiency" Type="float" />
+          <Property Name="salary" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Ranks">
           <Key>
@@ -72,8 +56,7 @@
           <Property Name="login" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="pass" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="date_reg" Type="date" Nullable="false" />
-          <Property Name="wallet" Type="smallmoney" Nullable="false" />
+          <Property Name="deleted" Type="int" />
         </EntityType>
         <Association Name="FK_Payments_Teams">
           <End Role="Teams" Type="Self.Teams" Multiplicity="1" />
@@ -148,7 +131,6 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="Хранилище REGDBModelContainer">
-          <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Payments" EntityType="Self.Payments" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ranks" EntityType="Self.Ranks" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
@@ -185,15 +167,6 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="REGDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="News">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="topic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="post" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="date_post" Type="DateTime" Nullable="false" Precision="0" />
-        </EntityType>
         <EntityType Name="Payments">
           <Key>
             <PropertyRef Name="id" />
@@ -202,16 +175,9 @@
           <Property Name="user_id" Type="Int32" Nullable="false" />
           <Property Name="team_id" Type="Int32" Nullable="false" />
           <Property Name="current_week" Type="Int32" Nullable="false" />
-          <Property Name="monday" Type="Int32" Nullable="false" />
-          <Property Name="tuesday" Type="Int32" Nullable="false" />
-          <Property Name="wednesday" Type="Int32" Nullable="false" />
-          <Property Name="thursday" Type="Int32" Nullable="false" />
-          <Property Name="friday" Type="Int32" Nullable="false" />
-          <Property Name="saturday" Type="Int32" Nullable="false" />
-          <Property Name="sunday" Type="Int32" Nullable="false" />
-          <Property Name="summ_coef" Type="Double" Nullable="false" />
-          <Property Name="efficiency" Type="Double" Nullable="false" />
-          <Property Name="salary" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+          <Property Name="summ_coef" Type="Int32" />
+          <Property Name="efficiency" Type="Double" />
+          <Property Name="salary" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Teams" Relationship="Self.FK_Payments_Teams" FromRole="Payments" ToRole="Teams" />
           <NavigationProperty Name="Users" Relationship="Self.FK_Payments_Users" FromRole="Payments" ToRole="Users" />
         </EntityType>
@@ -260,8 +226,7 @@
           <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="pass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="date_reg" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="wallet" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+          <Property Name="deleted" Type="Int32" />
           <NavigationProperty Name="Payments" Relationship="Self.FK_Payments_Users" FromRole="Users" ToRole="Payments" />
           <NavigationProperty Name="Ranks" Relationship="Self.FK_Users_Ranks" FromRole="Users" ToRole="Ranks" />
           <NavigationProperty Name="Role" Relationship="Self.FK_Users_Role" FromRole="Users" ToRole="Role" />
@@ -340,7 +305,6 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="REGDBEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="News" EntityType="Self.News" />
           <EntitySet Name="Payments" EntityType="Self.Payments" />
           <EntitySet Name="Ranks" EntityType="Self.Ranks" />
           <EntitySet Name="Role" EntityType="Self.Role" />
@@ -378,16 +342,6 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="Хранилище REGDBModelContainer" CdmEntityContainer="REGDBEntities">
-          <EntitySetMapping Name="News">
-            <EntityTypeMapping TypeName="REGDBModel.News">
-              <MappingFragment StoreEntitySet="News">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="topic" ColumnName="topic" />
-                <ScalarProperty Name="post" ColumnName="post" />
-                <ScalarProperty Name="date_post" ColumnName="date_post" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Payments">
             <EntityTypeMapping TypeName="REGDBModel.Payments">
               <MappingFragment StoreEntitySet="Payments">
@@ -395,13 +349,6 @@
                 <ScalarProperty Name="user_id" ColumnName="user_id" />
                 <ScalarProperty Name="team_id" ColumnName="team_id" />
                 <ScalarProperty Name="current_week" ColumnName="current_week" />
-                <ScalarProperty Name="monday" ColumnName="monday" />
-                <ScalarProperty Name="tuesday" ColumnName="tuesday" />
-                <ScalarProperty Name="wednesday" ColumnName="wednesday" />
-                <ScalarProperty Name="thursday" ColumnName="thursday" />
-                <ScalarProperty Name="friday" ColumnName="friday" />
-                <ScalarProperty Name="saturday" ColumnName="saturday" />
-                <ScalarProperty Name="sunday" ColumnName="sunday" />
                 <ScalarProperty Name="summ_coef" ColumnName="summ_coef" />
                 <ScalarProperty Name="efficiency" ColumnName="efficiency" />
                 <ScalarProperty Name="salary" ColumnName="salary" />
@@ -450,8 +397,7 @@
                 <ScalarProperty Name="login" ColumnName="login" />
                 <ScalarProperty Name="pass" ColumnName="pass" />
                 <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="date_reg" ColumnName="date_reg" />
-                <ScalarProperty Name="wallet" ColumnName="wallet" />
+                <ScalarProperty Name="deleted" ColumnName="deleted" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

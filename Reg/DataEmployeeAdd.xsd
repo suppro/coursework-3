@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="DataPayment" targetNamespace="http://tempuri.org/DataPayment.xsd" xmlns:mstns="http://tempuri.org/DataPayment.xsd" xmlns="http://tempuri.org/DataPayment.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="DataEmployeeAdd" targetNamespace="http://tempuri.org/DataEmployeeAdd.xsd" xmlns:mstns="http://tempuri.org/DataEmployeeAdd.xsd" xmlns="http://tempuri.org/DataEmployeeAdd.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -12,25 +12,27 @@
               <DbSource ConnectionRef="REGDBConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        Payments.current_week, Payments.summ_coef, Payments.efficiency, Payments.salary, Users.name, Teams.team_name, Ranks.rank, Payments.id
-FROM            Payments INNER JOIN
-                         Users ON Payments.user_id = Users.id INNER JOIN
-                         Teams ON Payments.team_id = Teams.id INNER JOIN
-                         Ranks ON Users.rank_id = Ranks.id</CommandText>
+                    <CommandText>SELECT        Users.id, Users.login, Users.pass, Users.name, Teams.team_name, Ranks.rank, Role.role, Users.deleted
+FROM            Users INNER JOIN
+                         Teams_Users ON Users.id = Teams_Users.user_id INNER JOIN
+                         Teams ON Teams_Users.team_id = Teams.id INNER JOIN
+                         Ranks ON Users.rank_id = Ranks.id INNER JOIN
+                         Role ON Users.role_id = Role.id
+WHERE        (Users.deleted = 0)</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="current_week" DataSetColumn="current_week" />
-              <Mapping SourceColumn="summ_coef" DataSetColumn="summ_coef" />
-              <Mapping SourceColumn="efficiency" DataSetColumn="efficiency" />
-              <Mapping SourceColumn="salary" DataSetColumn="salary" />
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="login" DataSetColumn="login" />
+              <Mapping SourceColumn="pass" DataSetColumn="pass" />
               <Mapping SourceColumn="name" DataSetColumn="name" />
               <Mapping SourceColumn="team_name" DataSetColumn="team_name" />
               <Mapping SourceColumn="rank" DataSetColumn="rank" />
-              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="role" DataSetColumn="role" />
+              <Mapping SourceColumn="deleted" DataSetColumn="deleted" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -39,16 +41,27 @@ FROM            Payments INNER JOIN
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DataPayment" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataPayment" msprop:Generator_UserDSName="DataPayment">
+  <xs:element name="DataEmployeeAdd" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataEmployeeAdd" msprop:Generator_UserDSName="DataEmployeeAdd">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="current_week" msprop:Generator_ColumnVarNameInTable="columncurrent_week" msprop:Generator_ColumnPropNameInRow="current_week" msprop:Generator_ColumnPropNameInTable="current_weekColumn" msprop:Generator_UserColumnName="current_week" type="xs:int" />
-              <xs:element name="summ_coef" msprop:Generator_ColumnVarNameInTable="columnsumm_coef" msprop:Generator_ColumnPropNameInRow="summ_coef" msprop:Generator_ColumnPropNameInTable="summ_coefColumn" msprop:Generator_UserColumnName="summ_coef" type="xs:int" minOccurs="0" />
-              <xs:element name="efficiency" msprop:Generator_ColumnVarNameInTable="columnefficiency" msprop:Generator_ColumnPropNameInRow="efficiency" msprop:Generator_ColumnPropNameInTable="efficiencyColumn" msprop:Generator_UserColumnName="efficiency" type="xs:double" minOccurs="0" />
-              <xs:element name="salary" msprop:Generator_ColumnVarNameInTable="columnsalary" msprop:Generator_ColumnPropNameInRow="salary" msprop:Generator_ColumnPropNameInTable="salaryColumn" msprop:Generator_UserColumnName="salary" type="xs:int" />
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="login" msprop:Generator_ColumnVarNameInTable="columnlogin" msprop:Generator_ColumnPropNameInRow="login" msprop:Generator_ColumnPropNameInTable="loginColumn" msprop:Generator_UserColumnName="login">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pass" msprop:Generator_ColumnVarNameInTable="columnpass" msprop:Generator_ColumnPropNameInRow="pass" msprop:Generator_ColumnPropNameInTable="passColumn" msprop:Generator_UserColumnName="pass">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -70,7 +83,14 @@ FROM            Payments INNER JOIN
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="role" msprop:Generator_ColumnVarNameInTable="columnrole" msprop:Generator_ColumnPropNameInRow="role" msprop:Generator_ColumnPropNameInTable="roleColumn" msprop:Generator_UserColumnName="role">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="deleted" msprop:Generator_ColumnVarNameInTable="columndeleted" msprop:Generator_ColumnPropNameInRow="deleted" msprop:Generator_ColumnPropNameInTable="deletedColumn" msprop:Generator_UserColumnName="deleted" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

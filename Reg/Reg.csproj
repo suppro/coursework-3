@@ -73,25 +73,55 @@
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataEmployee.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataEmployee.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataEmployeeAdd.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataEmployeeAdd.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataEmployeeRank.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataEmployeeRank.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataEmployeeRole.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataEmployeeRole.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataEmployeeTeam.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataEmployeeTeam.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataLineUp.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataLineUp.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataNews.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataNews.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataPayment.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataPayment.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataTeam.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataTeam.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataTeams.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataTeams.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataTeamTable.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataTeamTable.xsd</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -107,9 +137,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="News.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Payments.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -162,10 +189,61 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
+    <None Include="DataEmployee.xsc">
+      <DependentUpon>DataEmployee.xsd</DependentUpon>
+    </None>
+    <None Include="DataEmployee.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataEmployee.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataEmployee.xss">
+      <DependentUpon>DataEmployee.xsd</DependentUpon>
+    </None>
+    <None Include="DataEmployeeAdd.xsc">
+      <DependentUpon>DataEmployeeAdd.xsd</DependentUpon>
+    </None>
+    <None Include="DataEmployeeAdd.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataEmployeeAdd.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataEmployeeAdd.xss">
+      <DependentUpon>DataEmployeeAdd.xsd</DependentUpon>
+    </None>
+    <None Include="DataEmployeeRank.xsc">
+      <DependentUpon>DataEmployeeRank.xsd</DependentUpon>
+    </None>
+    <None Include="DataEmployeeRank.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataEmployeeRank.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataEmployeeRank.xss">
+      <DependentUpon>DataEmployeeRank.xsd</DependentUpon>
+    </None>
+    <None Include="DataEmployeeRole.xsc">
+      <DependentUpon>DataEmployeeRole.xsd</DependentUpon>
+    </None>
+    <None Include="DataEmployeeRole.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataEmployeeRole.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataEmployeeRole.xss">
+      <DependentUpon>DataEmployeeRole.xsd</DependentUpon>
+    </None>
+    <None Include="DataEmployeeTeam.xsc">
+      <DependentUpon>DataEmployeeTeam.xsd</DependentUpon>
+    </None>
+    <None Include="DataEmployeeTeam.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataEmployeeTeam.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataEmployeeTeam.xss">
+      <DependentUpon>DataEmployeeTeam.xsd</DependentUpon>
+    </None>
     <None Include="DataLineUp.xsc">
       <DependentUpon>DataLineUp.xsd</DependentUpon>
     </None>
@@ -176,17 +254,6 @@
     </None>
     <None Include="DataLineUp.xss">
       <DependentUpon>DataLineUp.xsd</DependentUpon>
-    </None>
-    <None Include="DataNews.xsc">
-      <DependentUpon>DataNews.xsd</DependentUpon>
-    </None>
-    <None Include="DataNews.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataNews.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataNews.xss">
-      <DependentUpon>DataNews.xsd</DependentUpon>
     </None>
     <None Include="DataPayment.xsc">
       <DependentUpon>DataPayment.xsd</DependentUpon>
@@ -199,6 +266,17 @@
     <None Include="DataPayment.xss">
       <DependentUpon>DataPayment.xsd</DependentUpon>
     </None>
+    <None Include="DataTeam.xsc">
+      <DependentUpon>DataTeam.xsd</DependentUpon>
+    </None>
+    <None Include="DataTeam.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataTeam.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataTeam.xss">
+      <DependentUpon>DataTeam.xsd</DependentUpon>
+    </None>
     <None Include="DataTeams.xsc">
       <DependentUpon>DataTeams.xsd</DependentUpon>
     </None>
@@ -210,6 +288,21 @@
     <None Include="DataTeams.xss">
       <DependentUpon>DataTeams.xsd</DependentUpon>
     </None>
+    <None Include="DataTeamTable.xsc">
+      <DependentUpon>DataTeamTable.xsd</DependentUpon>
+    </None>
+    <None Include="DataTeamTable.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataTeamTable.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataTeamTable.xss">
+      <DependentUpon>DataTeamTable.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
