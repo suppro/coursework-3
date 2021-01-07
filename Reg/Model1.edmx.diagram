@@ -4,13 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f4cb6c64b03d4c28852844cd3167410e" Name="Diagram1">
-        <EntityTypeShape EntityType="REGDBModel.Payments" Width="1.5" PointX="3.25" PointY="5.25" IsExpanded="true" />
+      <Diagram DiagramId="1d8c42734e34420b969d3fd16776c0e3" Name="Diagram1">
+        <EntityTypeShape EntityType="REGDBModel.Payments" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
         <EntityTypeShape EntityType="REGDBModel.Ranks" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="REGDBModel.Role" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="REGDBModel.Teams" Width="1.5" PointX="5.875" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="REGDBModel.Teams_Users" Width="1.5" PointX="5.875" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="REGDBModel.Users" Width="1.5" PointX="3.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="REGDBModel.Role" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="REGDBModel.Teams" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="REGDBModel.Teams_Users" Width="1.5" PointX="8.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="REGDBModel.Users" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
         <AssociationConnector Association="REGDBModel.FK_Payments_Teams" ManuallyRouted="false" />
         <AssociationConnector Association="REGDBModel.FK_Payments_Users" ManuallyRouted="false" />
         <AssociationConnector Association="REGDBModel.FK_Users_Ranks" ManuallyRouted="false" />

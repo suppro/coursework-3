@@ -13,14 +13,16 @@ namespace Reg
     {
 
         int currentWeek;
+        string loginName;
         Teams teams = new Teams();
         Users users = new Users();
         Teams_Users teams_users = new Teams_Users();
         Payments payments = new Payments();
         Ranks ranks = new Ranks();
-        public AdminForm()
+        public AdminForm(string loginName)
         {
             InitializeComponent();
+            this.loginName = loginName;
         }
 
         private void AdminForm_Load(object sender, EventArgs e)
@@ -218,37 +220,55 @@ namespace Reg
                 return;
             }
 
-            using (REGDBEntities db = new REGDBEntities())
+            if(users.id == 0)
             {
-                if (users.id == 0)
+                using (REGDBEntities db = new REGDBEntities())
+                {
                     db.Users.Add(users);
-                else
-                    db.Entry(users).State = EntityState.Modified;
-                db.SaveChanges();
-            }
-
-            /*
-            using (REGDBEntities db = new REGDBEntities())
-            {
-                Users model = (from u in db.Users
-                                  orderby u.id descending
-                                  select u).FirstOrDefault();
-                teams_users.user_id = model.id;
-            }
-
-            using (REGDBEntities db = new REGDBEntities())
-            {
-                if (users.id == 0)
+                    db.SaveChanges();
+                }
+                //users.id = 0;
+                using (REGDBEntities db = new REGDBEntities())
+                {
+                    Users model = (from u in db.Users
+                                   orderby u.id descending
+                                   select u).FirstOrDefault();
+                    teams_users.user_id = model.id;
+                }
+                using (REGDBEntities db = new REGDBEntities())
+                {
                     db.Teams_Users.Add(teams_users);
-                else
-                    db.Entry(teams_users).State = EntityState.Modified;
-                db.SaveChanges();
-            }
-            */
-            ClearEmployee();
-            MessageBox.Show("Данные успешно добавлены");
-        }
+                    db.SaveChanges();
+                }
 
+                ClearEmployee();
+                MessageBox.Show("Новый сотрудник успешно добавлен");
+            }
+            else
+            {
+                using (REGDBEntities db = new REGDBEntities())
+                {
+                    db.Entry(users).State = EntityState.Modified;
+                    db.SaveChanges();
+                }
+
+                using (REGDBEntities db = new REGDBEntities())
+                {
+                    Users model = (from u in db.Users
+                                   orderby u.id descending
+                                   select u).FirstOrDefault();
+                    teams_users.user_id = model.id;
+                }
+                using (REGDBEntities db = new REGDBEntities())
+                {
+                    db.Entry(teams_users).State = EntityState.Modified;
+                    db.SaveChanges();
+                }
+                ClearEmployee();
+                MessageBox.Show("Данные сотрудника успешно обновлены");
+            }
+        }
+        
         private void selectEmployee(object sender, EventArgs e)
         {
             txtEmployeePassword.Enabled = false;
@@ -351,7 +371,13 @@ namespace Reg
             return result;
         }
 
-
+        private void backButton(object sender, EventArgs e)
+        {
+              UserForm userForm = new UserForm(loginName);
+              userForm.Show();
+              this.Close();
+               userForm.Show();
+        }
         private void closeApp(object sender, EventArgs e)
         {
             Application.Exit();
