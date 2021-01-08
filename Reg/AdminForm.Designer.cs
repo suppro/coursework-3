@@ -186,7 +186,7 @@
             this.tabPanel.Location = new System.Drawing.Point(44, 140);
             this.tabPanel.Margin = new System.Windows.Forms.Padding(4);
             this.tabPanel.Name = "tabPanel";
-            this.tabPanel.SelectedIndex = 1;
+            this.tabPanel.SelectedIndex = 0;
             this.tabPanel.Size = new System.Drawing.Size(1449, 484);
             this.tabPanel.Style = MetroFramework.MetroColorStyle.Purple;
             this.tabPanel.TabIndex = 54;
@@ -221,7 +221,7 @@
             this.btnNextWeek.Name = "btnNextWeek";
             this.btnNextWeek.Size = new System.Drawing.Size(209, 28);
             this.btnNextWeek.TabIndex = 44;
-            this.btnNextWeek.Text = "Перейти на следующюю";
+            this.btnNextWeek.Text = "Перейти на следующую";
             this.btnNextWeek.UseVisualStyleBackColor = true;
             this.btnNextWeek.Click += new System.EventHandler(this.nextWeek);
             // 

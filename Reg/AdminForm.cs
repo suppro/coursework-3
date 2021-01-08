@@ -28,21 +28,6 @@ namespace Reg
         private void AdminForm_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "dataEmployeeAdd.DataTable1". При необходимости она может быть перемещена или удалена.
-            this.dataTable1TableAdapter2.Fill(this.dataEmployeeAdd.DataTable1);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "dataPayment.DataTable1". При необходимости она может быть перемещена или удалена.
-            this.dataTable1TableAdapter.Fill(this.dataPayment.DataTable1);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "dataEmployeeTeam.Teams". При необходимости она может быть перемещена или удалена.
-            this.teamsTableAdapter3.Fill(this.dataEmployeeTeam.Teams);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "dataEmployeeRole.Role". При необходимости она может быть перемещена или удалена.
-            this.roleTableAdapter.Fill(this.dataEmployeeRole.Role);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "dataEmployeeRank.Ranks". При необходимости она может быть перемещена или удалена.
-            this.ranksTableAdapter.Fill(this.dataEmployeeRank.Ranks);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "dataEmployeeAdd.DataTable1". При необходимости она может быть перемещена или удалена.
-            this.dataTable1TableAdapter2.Fill(this.dataEmployeeAdd.DataTable1);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "dataTeamTable.Teams". При необходимости она может быть перемещена или удалена.
-            this.teamsTableAdapter2.Fill(this.dataTeamTable.Teams);
-            this.dataTable1TableAdapter.Fill(this.dataPayment.DataTable1);
-            this.dataTable1TableAdapter1.Fill(this.dataEmployee.DataTable1);
             this.teamsTableAdapter1.Fill(this.dataTeam.Teams);
             btnAdd.Enabled = false;
             btnCalcSalary.Enabled = false;
@@ -90,8 +75,16 @@ namespace Reg
             dataPaymentBindingSource.Filter = $"team_name = '{teamSelected}' and current_week = '{currentWeek}'";
             dataEmployeeAddBindingSource.Filter = $"deleted = 0";
             dgvPayments.ClearSelection();
+            this.dataTable1TableAdapter2.Fill(this.dataEmployeeAdd.DataTable1);
             this.dataTable1TableAdapter.Fill(this.dataPayment.DataTable1);
+            this.teamsTableAdapter3.Fill(this.dataEmployeeTeam.Teams);
+            this.roleTableAdapter.Fill(this.dataEmployeeRole.Role);
+            this.ranksTableAdapter.Fill(this.dataEmployeeRank.Ranks);
+            this.dataTable1TableAdapter2.Fill(this.dataEmployeeAdd.DataTable1);
             this.teamsTableAdapter2.Fill(this.dataTeamTable.Teams);
+            this.dataTable1TableAdapter.Fill(this.dataPayment.DataTable1);
+            this.dataTable1TableAdapter1.Fill(this.dataEmployee.DataTable1);
+            
         }
 
         private void refreshFormsAction(object sender, EventArgs e)
@@ -109,8 +102,8 @@ namespace Reg
                 using (REGDBEntities db = new REGDBEntities())
                 {
                     payments = db.Payments.Where(x => x.id == payments.id).FirstOrDefault();
-                    txtNameTeam.Text = payments.user_id.ToString();
-                    txtNameEmployee.Text = payments.team_id.ToString();
+                    txtNameTeam.Text = payments.team_id.ToString();
+                    txtNameEmployee.Text = payments.user_id.ToString();
                     txtSalary.Text = payments.salary.ToString();
                 }
                 btnAdd.Enabled = true;
@@ -191,16 +184,12 @@ namespace Reg
                 MessageBox.Show("Поле должно быть заполненно");
                 return;
             }
-            var regexName = @"^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$";
-            if (!Regex.IsMatch(txtTeamName.Text, regexName))
-            {
-                MessageBox.Show("Название команды несоответсвует "); return;
-            }
             using (REGDBEntities db = new REGDBEntities())
             {
                 db.Teams.Add(teams);
                 db.SaveChanges();
             }
+            MessageBox.Show("Новая команда успешно добавлена");
             refreshForms();
         }
 
@@ -339,6 +328,7 @@ namespace Reg
                     users = db.Users.Where(x => x.id == i).FirstOrDefault();
                     if (users == null) continue;
                     teams_users = db.Teams_Users.Where(x => x.user_id == i).FirstOrDefault();
+                    if (teams_users == null) continue;
                     payments.salary = 0;
                     payments.user_id = users.id;
                     payments.team_id = teams_users.team_id;
@@ -354,6 +344,7 @@ namespace Reg
             currentWeek++;
             refreshForms();
             loadUserInfo();
+            MessageBox.Show("Произошел переход на следующую неделю");
         }
 
         private String getHash(String text)
